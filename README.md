@@ -55,7 +55,7 @@ ___Data preprocessing___
 
 The preprocessing of data for LR model included the following step:
 - vecorizing training and test data using sklearn CountVectorizer(), which transformed text into a vector on the basis of the frequency (count) of each word that occurs in the entire text.
--
+
 The preprocessing of data for CNN model included the following steps:
 - tokenizing training and test data using tensorflow.keras.Tokenizer() which quickly and efficiently convert text to numbers
 - to make the Tokenizer output workable, the documents are padded to be of equal length (maxlen set according to a max line length)
