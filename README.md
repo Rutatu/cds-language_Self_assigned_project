@@ -31,15 +31,24 @@ Depiction of model´s architecture can be found in folder called ***'out'***.
 
 | File | Description |
 | --- | --- |
-| output | Folder containing files produced by the script |
-| output/Emotions_classifier_report.csv | Classification metrics of the model |
-| output/Emotions_classifier_performance.png | Model´s performance graph |
-| output/VGG-Face_CNN´s_architecture.png | Depiction of CNN model´s architecture used |
+| data/ | Folder containing input files for the script |
+| data/tweets_class.csv | Input CSV file for the script |
+| out/ | Folder containing files produced by the script |
+| out/CNN_classification_performance_graph_non-trainable.png | CNN Model´s performance graph with non-trainable weights |
+| out/CNN_classification_performance_graph_trainable.png | CNN Model´s performance graph with trainable weight |
+| out/CNN_classifier_report_non-trainable.csv | Classification metrics of the CNN model with non-trainable weights |
+| out/CNN_classifier_report_trainable.csv | Classification metrics of the CNN model with trainable weights |
+| out/CNN_Model´s_architecture.png | Depiction of CNN model´s architecture used |
+| out/logReg_classification_report.csv | Classification metrics of the LR model |
+| out/logReg_confusion_matrix.png | Confusion matrix of the LR model |
 | src/ | Folder containing the script |
 | src/emotions_CNN&LR.py | The script |
+| utils/ | Folder containing utility script for the project |
+| utils/classifier_utils.py | utility script used in LR classifier script |
+| LICENSE | A software license defining what other users can and can't do with the source code |
 | README.md | Description of the assignment and the instructions |
-| emotion_venv.sh | bash file for creating a virtual environmment  |
-| kill_emotion.sh | bash file for removing a virtual environment |
+| create_emotion_venv.sh | bash file for creating a virtual environmment  |
+| kill_emotion_venv.sh | bash file for removing a virtual environment |
 | requirements.txt| list of python packages required to run the script |
 
 
