@@ -36,7 +36,7 @@ Depiction of model´s architecture can be found in folder called ***'out'***.
 | output/Emotions_classifier_performance.png | Model´s performance graph |
 | output/VGG-Face_CNN´s_architecture.png | Depiction of CNN model´s architecture used |
 | src | Folder containing the script |
-| src/emotion_class.py | The script |
+| src/emotions_CNN&LR.py | The script |
 | README.md | Description of the assignment and the instructions |
 | emotion_venv.sh | bash file for creating a virtual environmment  |
 | kill_emotion.sh | bash file for removing a virtual environment |
@@ -105,10 +105,10 @@ Run the code:
 $ cd src
 
 #7 Run the code with default parameters
-$ python emotions_CNN.py -dir ../data/tweets_class.csv
+$ python emotions_CNN&LR.py -dir ../data/tweets_class.csv
 
 #8 Run the code with self-chosen parameters
-$ python emotions_CNN.py -dir ../data/tweets_class.csv -test 0.3 -optim SGD -ep 100
+$ python emotions_CNN&LR.py -dir ../data/tweets_class.csv -test 0.3 -optim SGD -ep 100
 
 #9 To remove the newly created virtual environment
 $ bash kill_emotion_venv.sh
