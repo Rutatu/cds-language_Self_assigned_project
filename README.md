@@ -5,14 +5,14 @@
 
 
 
-# Text Classification Using CNN and Pre-trained Glove Word Embeddings: Emotion classification
+# Text Classification Using CNN and Pre-trained Glove Word Embeddings: tweets classification based on emotions
 
 
 ## About the script
 
-This assignment is a self-assigned project. For this assignment I have chosen to train a Logistic Regression (LR) model and CNN model with pre-trained ```Glove Word Embeddings``` for a text classification task -  classifying tweets based on 4 emotions: joy, sadness, anger and fear. Such task might be useful for multiple purposes. We live in the world where emotional and mental health issues become a big concern. Classifying emotions might be just a first step to test whether, for instance, we can develop clever methods to detect early signs of depression in social media posts or other digitally produced content.
+This assignment is a self-assigned project. For this assignment I have chosen to train a Logistic Regression (LR) model and a Convolutional Neural Network (CNN) model with pre-trained ```Glove Word Embeddings``` for a text classification task -  classifying tweets based on 4 emotions: joy, sadness, anger and fear. Such task might be useful for multiple purposes. We live in the world where emotional and mental health issues became a big concern. Classifying emotions might be just a first step to test whether, for instance, we can develop clever methods to detect early signs of depression in social media posts or other digitally produced content.
 
-The script trains a Logistic Regression (LR) model on tweets to establish a baseline model performance, it outputs a classification report and a confusion matrix, prints out results to the terminal. Then, it trains a deep learning CNN model using pre-trained ```Glove Word Embeddings``` and outputs classification report anf performance graph, prints out performance results to the terminal.
+The script trains a LR model on tweets to establish a baseline model performance, it outputs a classification report and a confusion matrix, prints out results to the terminal. Then, it trains a deep learning CNN model using pre-trained ```Glove Word Embeddings``` and outputs classification report anf performance graph, prints out performance results to the terminal.
 
 ## Methods
 
@@ -46,7 +46,7 @@ Depiction of model´s architecture can be found in folder called ***'out'***.
 
 ## Data
 
-Dataset for this project consists of annotated tweets based on four emotions: . Manual annotation of the dataset to obtain real-valued scores was done through Best-Worst Scaling (BWS), an annotation scheme shown to obtain very reliable scores. I have merged the three datasets found in the link below, and split the data to training and testing sets in the script, to increase the amount of training data. Dataset has two columns: 'text', which is the tweet and 'label', which is an emotional category the tweet belongs to.
+Dataset for this project consists of annotated tweets based on four emotions: joy, sadness, anger and fear. Manual annotation of the dataset to obtain real-valued scores was done through Best-Worst Scaling (BWS), an annotation scheme shown to obtain very reliable scores. I have merged the three datasets found in the link below, and split the data to training and testing sets in the script, to increase the amount of training data. Dataset has two columns: 'text', which is the tweet and 'label', which is an emotional category the tweet belongs to.
 
 Link to data: https://www.kaggle.com/anjaneyatripathi/emotion-classification-nlp?select=emotion-labels-val.csv
 
@@ -124,6 +124,9 @@ I hope it worked!
 
 ## Results
 
+LR classifier achieved a weighted average accuracy of 86% for correctly classifying tweets based on emotion. CNN classifier achieved a weighted average accuracy of 77% using  pre-trained ```Glove Word Embeddings```, which were not updated during this training. The same CNN classifier achieved a weighted average accuracy of 84% using  pre-trained ```Glove Word Embeddings``` and updating them during the training. All of this indicate, that a simple LR model performs better than a deep learning CNN.
+
+Performance graphs reveal, that the validation curve in both CNN model´s runs (with non-trainable and trainable weights) was decreasing for the first few epochs, then started increasing and fluctuating until the end of training, which might indicate an overfitting issue. Although both runs faced the same problem, overfitting was worse for the run with non-trainable weights, also, the validation accuracy was lower for this run. ```Glove Word Embeddings```  were trained on a combination of the Wikipedia 2014 dump and the Gigaword 5 corpus, which might not be very closely related to the language used on Twitter social media, which can be full of jargon. More experimenting is needed to draw final conclusions.
 
 
 ## References
