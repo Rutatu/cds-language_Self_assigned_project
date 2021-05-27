@@ -35,7 +35,7 @@ Depiction of model´s architecture can be found in folder called ***'out'***.
 | output/Emotions_classifier_report.csv | Classification metrics of the model |
 | output/Emotions_classifier_performance.png | Model´s performance graph |
 | output/VGG-Face_CNN´s_architecture.png | Depiction of CNN model´s architecture used |
-| src | Folder containing the script |
+| src/ | Folder containing the script |
 | src/emotions_CNN&LR.py | The script |
 | README.md | Description of the assignment and the instructions |
 | emotion_venv.sh | bash file for creating a virtual environmment  |
@@ -60,10 +60,12 @@ The preprocessing of data for CNN model included the following steps:
 - tokenizing training and test data using tensorflow.keras.Tokenizer() which quickly and efficiently convert text to numbers
 - to make the Tokenizer output workable, the documents are padded to be of equal length (maxlen set according to a max line length)
 - labels transformed to binarized vectors
+- mapping the vocabulary in the data onto the pretrained embeddings, creating an embedding matrix with one row per word in the vocabulary
 
 ## Intructions to run the code
 
 The code was tested on an HP computer with Windows 10 operating system. It was executed on Jupyter worker02.
+Note:  ```Glove Word Embeddings``` are downloaded during the creation of virtual environment.
 
 __Code parameters__
 
